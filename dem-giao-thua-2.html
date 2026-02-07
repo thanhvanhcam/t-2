@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Không khí đêm giao thừa</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #fff8e1;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #c62828;
+        }
+        .box {
+            background: white;
+            margin: 20px auto;
+            padding: 15px;
+            width: 85%;
+            border-radius: 10px;
+        }
+        img {
+            width: 80%;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        button {
+            margin: 5px;
+            padding: 8px 15px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🎆 KHÔNG KHÍ ĐÊM GIAO THỪA 🎆</h1>
+
+    <div class="box">
+        <h2>Chuẩn bị giao thừa</h2>
+        <p>
+            Vào đêm giao thừa, các thành viên trong gia đình thường tập trung
+            để chuẩn bị cho buổi cúng giao thừa. Trong thời gian chờ đến 12 giờ,
+            mọi người có thể cùng nhau sinh hoạt và trò chuyện.
+        </p>
+        <img src="giao-thua1.jpg" alt="Gia đình quây quần đêm giao thừa">
+    </div>
+
+    <div class="box">
+        <h2>Hoạt động trong lúc chờ giao thừa</h2>
+
+        <button onclick="choiBai()">🃏 Đánh bài</button>
+        <button onclick="choiLoTo()">🎲 Chơi lô tô</button>
+        <button onclick="noiChuyen()">💬 Trò chuyện</button>
+
+        <p id="hoatDong"></p>
+        <img id="hinhAnh" style="display:none;" alt="Hoạt động đêm giao thừa">
+    </div>
+
+    <script>
+        function hienAnh(text, img) {
+            document.getElementById("hoatDong").innerText = text;
+            let hinh = document.getElementById("hinhAnh");
+            hinh.src = img;
+            hinh.style.display = "block";
+        }
+
+        function choiBai() {
+            hienAnh(
+                "Mọi người cùng ngồi đánh bài cho vui trong lúc chờ đến giờ cúng giao thừa.",
+                "danh-bai.jpg"
+            );
+        }
+
+        function choiLoTo() {
+            hienAnh(
+                "Cả gia đình cùng chơi lô tô, tạo không khí vui vẻ và ấm cúng.",
+                "loto.jpg"
+            );
+        }
+
+        function noiChuyen() {
+            hienAnh(
+                "Mọi người quây quần trò chuyện, chúc nhau năm mới bình an và hạnh phúc.",
+                "giao-thua.jpg"
+            );
+        }
+    </script>
+
+</body>
+</html>
